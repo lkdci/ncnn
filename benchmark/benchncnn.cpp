@@ -274,7 +274,7 @@ int main(int argc, char** argv)
     fprintf(stderr, "cooling_down = %d\n", (int)g_enable_cooling_down);
 
     // run
-    benchmark("model", ncnn::Mat(height, width, channels), opt);
+    benchmark("model", ncnn::Mat(width, height, channels), opt);
 
 #if NCNN_VULKAN
     delete g_blob_vkallocator;
