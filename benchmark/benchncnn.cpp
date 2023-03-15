@@ -132,6 +132,8 @@ void benchmark(const char* comment, const ncnn::Mat& _in, const ncnn::Option& op
 
     ncnn::Net net;
 
+    net.register_custom_layer("YoloV5Focus", YoloV5Focus_layer_creator);
+
     net.opt = opt;
 
 #if NCNN_VULKAN
